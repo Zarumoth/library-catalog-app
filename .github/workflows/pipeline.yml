@@ -8,7 +8,7 @@ on:
 
 jobs:
   build_and_test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Checkout the repository
@@ -36,7 +36,7 @@ jobs:
 
   deploy:
     name: Deploy to Render
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: build_and_test
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     
